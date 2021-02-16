@@ -83,7 +83,7 @@ class SupervisedTransformer(Transformer):
     def _supervised(self):
         return True
 
-    def learn_one(
+    def learn_one(  # type: ignore
         self, x: dict, y: base.typing.Target, **kwargs
     ) -> "SupervisedTransformer":
         """Update with a set of features `x` and a target `y`.

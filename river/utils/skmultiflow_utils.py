@@ -102,7 +102,7 @@ def get_max_value_key(dictionary):
         return 0
 
 
-def calculate_object_size(obj, unit="byte") -> int:
+def calculate_object_size(obj, unit="byte") -> float:
     """Iteratively calculates the `obj` size in bytes.
 
     Visits all the elements related to obj accounting for their respective
@@ -122,7 +122,7 @@ def calculate_object_size(obj, unit="byte") -> int:
 
     """
     seen = set()
-    to_visit = deque()
+    to_visit = deque()  # type: ignore
     byte_size = 0
 
     to_visit.append(obj)
@@ -192,7 +192,7 @@ def is_scalar_nan(x) -> bool:
     """
     # convert from numpy.bool_ to python bool to ensure that testing
     # is_scalar_nan(x) is True does not fail.
-    return bool(isinstance(x, numbers.Real) and np.isnan(x))
+    return bool(isinstance(x, numbers.Real) and np.isnan(x))  # type: ignore
 
 
 def add_dict_values(dict_a: dict, dict_b: dict, inplace=False) -> dict:

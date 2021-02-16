@@ -40,7 +40,7 @@ class Base:
 
         params = {}
 
-        for name, param in inspect.signature(self.__init__).parameters.items():
+        for name, param in inspect.signature(self.__init__).parameters.items():  # type: ignore
 
             # *args
             if param.kind == param.VAR_POSITIONAL:

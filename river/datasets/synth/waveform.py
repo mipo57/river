@@ -1,3 +1,5 @@
+import typing
+
 import numpy as np
 
 from river.utils.skmultiflow_utils import check_random_state
@@ -76,7 +78,7 @@ class Waveform(base.SyntheticDataset):
     )
 
     def __init__(
-        self, seed: int or np.random.RandomState = None, has_noise: bool = False
+        self, seed: typing.Union[int, np.random.RandomState] = None, has_noise: bool = False
     ):
         super().__init__(
             n_features=self._N_BASE_FEATURES

@@ -1,3 +1,4 @@
+# mypy: ignore-errors
 import typing
 from copy import deepcopy
 

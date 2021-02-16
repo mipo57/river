@@ -1,3 +1,4 @@
+# mypy: ignore-errors
 import collections
 import functools
 import io

@@ -37,7 +37,7 @@ class Estimator(base.Base, abc.ABC):
         return compose.Pipeline(other, self)
 
     @property
-    def _tags(self) -> typing.Dict[str, bool]:
+    def _tags(self) -> typing.Set[str]:
         """Return the estimator's tags.
 
         Tags can be used to specify what kind of inputs an estimator is able to process. For
@@ -50,13 +50,13 @@ class Estimator(base.Base, abc.ABC):
         """
 
         try:
-            tags = self._more_tags()
+            tags = self._more_tags()  # type: ignore
         except AttributeError:
             tags = set()
 
         for parent in self.__class__.__mro__:
             try:
-                tags |= parent._more_tags(self)
+                tags |= parent._more_tags(self)  # type: ignore
             except AttributeError:
                 pass
 

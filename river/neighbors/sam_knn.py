@@ -1,3 +1,4 @@
+# mypy: ignore-errors
 import copy as cp
 import logging
 from collections import deque

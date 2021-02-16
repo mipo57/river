@@ -1,3 +1,4 @@
+# mypy: ignore-errors
 import numpy as np
 
 from river.base import DriftDetector

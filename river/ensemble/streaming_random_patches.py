@@ -1,3 +1,4 @@
+# mypy: ignore-errors
 import collections
 import copy
 import itertools

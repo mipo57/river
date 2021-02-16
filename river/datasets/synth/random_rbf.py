@@ -1,3 +1,4 @@
+import typing
 import warnings
 
 import numpy as np
@@ -60,8 +61,8 @@ class RandomRBF(base.SyntheticDataset):
 
     def __init__(
         self,
-        seed_model: int or np.random.RandomState = None,
-        seed_sample: int or np.random.RandomState = None,
+        seed_model: typing.Union[int, np.random.RandomState] = None,
+        seed_sample: typing.Union[int, np.random.RandomState] = None,
         n_classes: int = 2,
         n_features: int = 10,
         n_centroids: int = 50,
@@ -180,8 +181,8 @@ class RandomRBFDrift(RandomRBF):
 
     def __init__(
         self,
-        seed_model: int or np.random.RandomState = None,
-        seed_sample: int or np.random.RandomState = None,
+        seed_model: typing.Union[int, np.random.RandomState] = None,
+        seed_sample: typing.Union[int, np.random.RandomState] = None,
         n_classes: int = 2,
         n_features: int = 10,
         n_centroids: int = 50,

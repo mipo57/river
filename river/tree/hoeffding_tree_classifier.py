@@ -1,3 +1,4 @@
+# mypy: ignore-errors
 from operator import attrgetter
 
 from river import base

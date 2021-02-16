@@ -1,3 +1,4 @@
+# mypy: ignore-errors
 import bisect
 import collections
 import functools

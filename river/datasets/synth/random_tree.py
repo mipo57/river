@@ -1,3 +1,5 @@
+import typing
+
 import numpy as np
 
 from river.utils.skmultiflow_utils import check_random_state
@@ -67,8 +69,8 @@ class RandomTree(base.SyntheticDataset):
 
     def __init__(
         self,
-        seed_tree: int or np.random.RandomState = None,
-        seed_sample: int or np.random.RandomState = None,
+        seed_tree: typing.Union[int, np.random.RandomState] = None,
+        seed_sample: typing.Union[int, np.random.RandomState] = None,
         n_classes: int = 2,
         n_num_features: int = 5,
         n_cat_features: int = 5,

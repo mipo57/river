@@ -1,3 +1,4 @@
+# mypy: ignore-errors
 from math import log, sqrt
 
 from river.base import DriftDetector
